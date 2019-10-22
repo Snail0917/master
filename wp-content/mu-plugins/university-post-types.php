@@ -14,6 +14,20 @@ function university_post_types() {
     ),
     'menu_icon' => 'dashicons-calendar'
   ));
+
+  register_post_type('program', array(
+    'rewrite' => array('slug' => 'program'),
+    'has_archive' => true,
+    'public' => true,
+    'labels' => array(
+      'name' => 'program',
+      'add_new_item' => 'Add New program',
+      'edit_item' => 'Edit program',
+      'all_items' => 'All program',
+      'singular_name' => 'program'
+    ),
+    'menu_icon' => 'dashicons-calendar'
+  ));
 }
 
 add_action('init', 'university_post_types');
